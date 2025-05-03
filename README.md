@@ -11,5 +11,4 @@ Il tutto nasce da un progetto Open Source, che però nascondeva un po' di insidi
 ![IMG_6902](https://github.com/user-attachments/assets/6511b9b9-b3a0-4044-88e8-427b737980d6)
 
 
-
-
+![Screenshot 2025-05-04 alle 01 41 33](https://github.com/user-attachments/assets/7752548b-12ca-431a-b7b0-10415b31d818)
