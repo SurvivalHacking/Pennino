@@ -34,6 +34,7 @@
 #include <WiFiManager.h> // Library for managing Wi-Fi connection via a portal
 #include <TimeLib.h>     // Library to access system time DST functions 
 
+
 // #define CALIBRATION  // Uncomment this line to enter the calibration mode for servo movements
 // In calibration mode, the servos will continue to move at a 45-degree angle in opposite directions.
 // If they do not make a 45-degree movement, variables SERVOFAKTORLEFT and SERVOFAKTORRIGHT must be changed so that the servos do not move correctly at 45 degrees.
@@ -84,10 +85,17 @@ int FirstTime=0;    // FirstTime management for calibration
 // Structure to store local time information
 struct tm timeinfo;  // Holds current time data, updated every loop iteration
 
+
+void resetWiFi() {
+  WiFiManager wifiManager;
+  wifiManager.resetSettings();
+}
+
 void setup() 
 {
 #ifdef CALIBRATION
   // If calibration is enabled, do nothing special here and proceed with servo calibration
+  resetWiFi();
 #else
   // Initialize Wi-Fi and connect using WiFiManager (automatically creates a portal to input Wi-Fi credentials)
   WiFiManager wifiManager;
